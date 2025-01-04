@@ -12,6 +12,9 @@ body{
 }
 header{
   background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 header .container{
   max-width: 1400px;
@@ -108,3 +111,72 @@ header a{
 .form .err{
   border: 1px solid red;
 }
+header nav{
+  margin: 20px;
+  display: flex;
+
+
+}
+header nav div{
+  display: flex;
+  padding: 10px;
+}
+header nav button{
+  color:#0af962 ;
+  background-color: #ffffff;
+  border-color: #0af962;
+  border-radius: 5px;
+  font-size: medium;
+  font-weight: 800;
+  padding: 10px 15px;
+  margin: 5px;
+
+}
+header nav button:hover{
+  color: white;
+  background-color: #0af962;
+  border-color: white;
+  transition: all 0.2s ease;
+}
+
+.signup,.login{
+  width: 50%;
+  justify-self: center;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.signup input,.login input{
+  margin: 5px 4px 20px;
+  padding: 10px;
+  border-radius: 9px;
+  outline: none;
+  font-size: medium;
+  font-weight: 400;
+
+}
+.signup button,.login button{
+  width: 15%;
+  padding: 11px 10px;
+  font-size: large;
+  font-weight: 800;
+  border-radius: 8px;
+  background-color: #0af962;
+
+}
+.signup h2 ,.login h2{
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-shadow: 5px 5px  #0af962 ;
+}
+.error{
+  color: rgb(188, 0, 0);
+  background-color: #ffa3a3;
+  border: 1px rgb(206, 0, 0) solid;
+  padding: 10px;
+  margin: 5px;
+}
+

@@ -1,6 +1,7 @@
 const express=require("express")
 require("dotenv").config()
 const mongoose=require("mongoose")
+const {userrouter}=require("./routers/users")
 
 const workoutrouter=require("./routers/workouts")
 
@@ -15,6 +16,7 @@ app.use((req,res,next)=>{
     // next is used to call next method ie next goes to get method
 })
 //using external routes
+app.use("/api/users",userrouter)
 app.use("/api/workout",workoutrouter)
 
 // give responses for / i.e. root 
@@ -29,4 +31,4 @@ mongoose.connect(process.env.MONGO_URI).then(()=>{
     })
 }).catch((error)=>{
     console.log(error)
-})
+}) 
